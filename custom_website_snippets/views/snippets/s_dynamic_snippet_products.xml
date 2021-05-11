@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <template id="s_dynamic_snippet_table_product_id" inherit_id="website.snippets" name="Place into building blocks bar">        
+        <xpath expr="//div[@id='snippet_structure']" position="inside">            
+            <div class="o_panel_body">                 
+                <t t-snippet="custom_website_snippets.s_dynamic_snippet_table_product"      
+                    t-thumbnail="/custom_website_snippets/static/icono.png"/> 
+                    <t t-call="website.s_dynamic_snippet_template"> 
+                    <t t-set="snippet_name" t-value="'s_dynamic_snippet_table_product'"/>
+                </t>
+            </div>        
+        </xpath>    
+    </template>
+
+    <template id="s_dynamic_snippet_table_product" name="Dynamic Table Products">
+        <section
+        data-snippet="s_dynamic_snippet"
+        class="s_dynamic_snippet_table_product s_dynamic pt24 pb24 o_colored_level"
+        data-name="Dynamic Products"
+        data-number-of-elements="4"
+        data-number-of-elements-small-devices="1"
+        data-carousel-interval="5000"
+        data-template-key="website.dynamic_filter_template_header_image_footer_card"
+        data-filter-id="2"
+        data-number-of-records="16">
+            <div class="container s_allow_columns">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 pt16 pb16 o_colored_level">
+                    <img src="/web/image/website.s_image_text_default_image"
+                    class="img img-fluid mx-auto"
+                    loading="lazy" 
+                    data-original-id="10109"
+                        data-original-src="/website/static/src/img/snippets_demo/s_image_text.jpg" 
+                        data-mimetype="image/jpeg" 
+                        data-original-title="" 
+                        title="" 
+                        aria-describedby="tooltip792044" />
+                    </div>
+                    <div class="col-lg-6 pt16 pb16 o_colored_level">
+                        <h2>Sección Subtítulo</h2>
+                        <p class="o_default_snippet_text">Write one or two paragraphs describing your product or services.</p>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td><br></br></td>
+                                    <td><br></br></td>
+                                </tr>
+                                <tr>
+                                    <td><br></br></td>
+                                    <td><br></br></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+    <template id="s_dynamic_snippet_table_product_options"  inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <t t-call="website.dynamic_snippet_carousel_options_template">
+                <t t-set="snippet_name" t-value="'s_dynamic_snippet_table_product'"/>
+                <t t-set="snippet_selector" t-value="'.s_dynamic_snippet_table_product'"/>
+                <we-select string="Product List" data-name="product_id_opt" data-attribute-name="productId" data-no-preview="true">
+                    <we-button data-select-data-attribute="-1">Select product</we-button>
+                </we-select>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="assets_snippet_s_dynamic_snippet_table_product_js_000" inherit_id="website.assets_snippet_s_dynamic_snippet_carousel_js_000">
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/custom_website_snippets/static/src/snippets/s_dynamic_snippet_table_product/000.js"/>
+        </xpath>
+    </template>
+</odoo>
+

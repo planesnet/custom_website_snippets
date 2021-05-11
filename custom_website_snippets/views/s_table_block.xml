@@ -1,0 +1,102 @@
+<odoo>
+    <data>
+
+      <template id="s_table_block_id" inherit_id="website.snippets" name="Place into building blocks bar">        
+        <xpath expr="//div[@id='snippet_content']" position="inside">            
+          <div class="o_panel_body">                 
+            <t t-snippet="custom_website_snippets.s_table_block"      
+            t-thumbnail="/custom_website_snippets/static/icono.png"/>            
+          </div>        
+        </xpath>    
+      </template>
+
+
+
+      <template id="s_table_block" name="Table">
+        <section>
+        <div class="container s_allow_columns">
+          <div class="tablacont">
+            <table style="width: 538px; height: 343px;" border="0" cellspacing="0" cellpadding="0">
+              <thead>
+                <tr>
+                <th style="width: 33%; text-align: center;"><p>Armazones para enlucir con yeso</p></th>
+                <th style="width: 33%; text-align: center;"><p>Medida Puerta</p></th>
+                <th style="width: 34%; text-align: center;">Hueco total<p>anchoxalto</p></th>
+                <th style="text-align: center; width: 34%;">Stock<br />
+                disponible<p></p></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <td><p>600x2030x105</p></td>
+                <td style="text-align: center;"><p>625</p></td>
+                <td style="text-align: center;"><p>1310x2130x105</p></td>
+                <td style="text-align: center;">
+                <input style="color: #669900; line-height: 10px; font-size: 35px;" type="checkbox" name="check" checked="checked"/> 
+                <p></p></td>
+
+                </tr>
+                <tr>
+                <td><p>700x2030x105</p></td>
+                <td style="text-align: center;"><p>725</p></td>
+                <td style="text-align: center;"><p>1510x2130x105</p></td>
+                <td style="text-align: center;">
+                <input style="color: #669900; line-height: 10px; font-size: 35px;" type="checkbox" name="check" checked="checked"/> <p></p>
+                </td>
+                </tr>
+                <tr>
+                <td><p>800x2030x105</p></td>
+                <td style="text-align: center;"><p>825</p></td>
+                <td style="text-align: center;"><p>1710x2130x105</p></td>
+                <td style="text-align: center;">
+                <input style="color: #669900; line-height: 10px; font-size: 35px;" type="checkbox" name="check" checked="checked"/> <p></p>
+                </td>
+                </tr>
+                <tr>
+                <td><p>900x2030x105</p></td>
+                <td style="text-align: center;"><p>925</p></td>
+                <td style="text-align: center;"><p>1910x2130x105</p></td>
+                <td style="text-align: center;">
+                <input style="color: #669900; line-height: 10px; font-size: 35px;" type="checkbox" name="check" checked="checked"/> <p></p>
+                </td>
+                </tr>
+                <tr>
+                <td><p>1000x2030x105</p></td>
+                <td style="text-align: center;"><p>1025</p></td>
+                <td style="text-align: center;"><p>2110x2130x105</p></td>
+                <td style="text-align: center;">
+                <input style="color: #669900; line-height: 10px; font-size: 35px;" type="checkbox" name="check" checked="checked"/> <p></p>
+                </td>
+                </tr>
+                <tr>
+                <td><p>1200x2030x105</p></td>
+                <td style="text-align: center;"><p>1225</p></td>
+                <td style="text-align: center;"><p>2510x2130x105</p></td>
+                <td style="text-align: center;">
+                <input style="color: #669900; line-height: 10px; font-size: 35px;" type="checkbox" name="check" checked="checked"/> <p></p>
+                </td>
+                </tr>
+                <tr>
+                <td><p>700x2110x105</p></td>
+                <td style="text-align: center;"><p>725</p></td>
+                <td style="text-align: center;"><p>1510x2210x105</p></td>
+                <td style="text-align: center;">
+                <input style="color: #669900; line-height: 10px; font-size: 35px;" type="checkbox" name="check" checked="checked"/> <p></p>
+                </td>
+                </tr>
+                <tr>
+                <td><p>800x2110x105</p></td>
+                <td style="text-align: center;"><p>825</p></td>
+                <td style="text-align: center;"><p>1710x2210x105</p></td>
+                <td style="text-align: center;">
+                <input style="color: #669900; line-height: 10px; font-size: 35px;" type="checkbox" name="check" checked="checked"/> <p></p>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </section>
+      </template>
+    </data>
+</odoo>

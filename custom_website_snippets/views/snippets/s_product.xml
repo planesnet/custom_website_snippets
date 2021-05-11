@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+        <template id="s_product_id" inherit_id="website.snippets" name="Place into building blocks bar">        
+            <xpath expr="//div[@id='snippet_structure']" position="inside">            
+            <div class="o_panel_body">                 
+                <t t-snippet="custom_website_snippets.s_product"      
+                t-thumbnail="/custom_website_snippets/static/icono.png"/>            
+            </div>        
+            </xpath>    
+        </template>
+
+        <template id="s_product" name="Product">
+            <section class="s_product pt32 pb32 o_colored_level" 
+                data-snippet="s_product"
+                data-name="Product Table">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+                        <img src="/web/image/website.s_image_text_default_image"
+                        class="img img-fluid mx-auto"
+                        loading="lazy" 
+                        data-original-id="10109"
+                         data-original-src="/website/static/src/img/snippets_demo/s_image_text.jpg" 
+                         data-mimetype="image/jpeg" 
+                         data-original-title="" 
+                         title="" 
+                         aria-describedby="tooltip792044" />
+                        </div>
+                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+                            <h2>Sección Subtítulo</h2>
+                            <p class="o_default_snippet_text">Write one or two paragraphs describing your product or services.</p>
+                            <table class="product_table" >
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Nombre del producto</th>
+                                </tr>
+                                <tr>
+                                    <td><span><p></p></span></td>
+                                    <td><span><p></p></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span><p></p></span></td>
+                                    <td><span><p></p></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="s_product_options" inherit_id="website.snippet_options">
+            <xpath expr="." position="inside">
+                <t t-set="base_product_options">
+                    <we-select string="Size" data-apply-to=".modal-dialog" data-name="s_product_size_opt">
+                        <we-button data-select-class="modal-sm">Small</we-button>
+                        <we-button data-select-class="" data-name="s_product_size_md">Medium</we-button>
+                        <we-button data-select-class="modal-lg">Large</we-button>
+                        <we-button data-select-class="modal-xl">Extra Large</we-button>
+                        <we-button data-select-class="s_product_size_full" data-name="s_product_size_full">Full</we-button>
+                    </we-select>
+                </t>
+            </xpath>
+        </template>
+
+        <template id="assets_snippet_s_product_js_000" inherit_id="website.assets_frontend">
+            <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript" src="/custom_website_snippets/static/src/snippets/s_product/000.js"/>
+            </xpath>
+        </template>
+
+</odoo>

@@ -1,0 +1,23 @@
+<odoo>
+    <data>      
+      
+      
+      <template id="s_bullet_text_id" inherit_id="website.snippets" name="Place into building blocks bar">        
+        <xpath expr="//div[@id='snippet_content']" position="inside">            
+          <div class="o_panel_body">                 
+            <t t-snippet="custom_website_snippets.s_bullet_text"      
+            t-thumbnail="/custom_website_snippets/static/icono.png"/>            
+          </div>        
+        </xpath>    
+      </template>
+
+      <template id="s_bullet_text" name="Bullet">
+        <div class="s_badge " id="bullet_ic" data-name="Bullet">
+          <p>Stock disponible</p>
+          <i></i>
+        </div>
+      </template>
+
+      
+    </data>
+</odoo>
