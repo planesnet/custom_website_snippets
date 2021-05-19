@@ -5,8 +5,9 @@ const config = require('web.config');
 const core = require('web.core');
 const publicWidget = require('web.public.widget');
 const DynamicSnippetCarousel = require('website.s_dynamic_snippet_carousel');
-
+console.log("entrando en 000.js");
 const DynamicSnippetProducts = DynamicSnippetCarousel.extend({
+    
     selector: '.s_dynamic_snippet_table_product',
 
     //--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ const DynamicSnippetProducts = DynamicSnippetCarousel.extend({
      * @private
      */
     _isConfigComplete: function () {
-        return this._super.apply(this, arguments) && this.$el.get(0).dataset.id !== undefined;
+        return this._super.apply(this, arguments) && this.$el.get(0).dataset.productId !== undefined;
     },
     /**
      *
@@ -44,15 +45,17 @@ const DynamicSnippetProducts = DynamicSnippetCarousel.extend({
      */
     _getSearchDomain: function () {
         const searchDomain = this._super.apply(this, arguments);
-        const id = parseInt(this.$el.get(0).dataset.id);
-        if (id >= 0) {
-            searchDomain.push(['public_ids', 'child_of', id]);
+        const productId = parseInt(this.$el.get(0).dataset.productId);
+        if (productId >= 0) {
+            searchDomain.push(['public_categ_ids', 'child_of', productId]);
         }
+        console.log("producto id " + productId );
+        console.log("search domain " + searchDomain );
         return searchDomain;
     },
 
 });
-publicWidget.registry.dynamic_snippet_products = DynamicSnippetProducts;
-
+publicWidget.registry.dynamic_snippet_table_products = DynamicSnippetProducts;
+console.log("el snippet " + DynamicSnippetProducts );
 return DynamicSnippetProducts;
 });
